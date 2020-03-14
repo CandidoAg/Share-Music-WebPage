@@ -6,9 +6,16 @@
 </head>
 <body>
 <div class="container">
-    <article id="main">
-        <a href="{% url 'sign-in' %}">Sign In</a>
-    </article>
+    <!-- Albunes de un artista
+    {% for album in albums %}
+        <p>{{album.name}}</p>
+    {%endfor%}-->
+
+    <h1>{{artist}}</h1>
+    <h2>Álbumes:</h2>
+    {% for album in albums %}
+       <p>&nbsp;&nbsp;&nbsp;&nbsp;{{album.name}}</p>
+    {%endfor%}
 </div>
 </body>
 </html>
