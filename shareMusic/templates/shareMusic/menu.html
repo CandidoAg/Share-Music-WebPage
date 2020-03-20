@@ -1,0 +1,15 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css.css' %}">
+</head>
+<body>
+<div class="header">
+  <h1>shareMusic</h1>
+</div>
+<div class="navbar">
+  <a href="{% url 'appname.views.home'%}" class="{% if active_tab == 'Dashboard' %}active{% endif %}">Dashboard</a>
+  <a href="{% url 'appname.views.second'%}" class="{% if active_tab == 'second' %}active{% endif %}">Link</a>
+</div>

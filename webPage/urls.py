@@ -20,4 +20,5 @@ from shareMusic import views as p_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', p_views.home, name='home'),
+    path('secondPage', p_views.secondPage, name='secondPage')
 ]

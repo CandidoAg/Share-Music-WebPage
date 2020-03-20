@@ -15,4 +15,11 @@ def home(request):
         'albums': albums,
         'artist': artist
     }
-    return render(request, 'shareMusic/home.html', context)
+    return render(request, 'shareMusic/dashboard.html', context)
+
+def secondPage(request):
+    context = {
+        'albums': 'Nadie',
+        'artist': []
+    }
+    return render(request, 'shareMusic/dashboard.html',context)

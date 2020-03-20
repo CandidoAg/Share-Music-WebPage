@@ -1,0 +1,16 @@
+{% include "shareMusic/menu.html" with active_tab='Dashboard' %}
+<div class="container">
+    <!-- Albunes de un artista
+    {% for album in albums %}
+        <p>{{album.name}}</p>
+    {%endfor%}-->
+
+    <h1>{{artist}}</h1>
+    <h2>Álbumes:</h2>
+    <ul>
+    {% for album in albums %}
+       <li>&nbsp;&nbsp;&nbsp;&nbsp;{{album.name}}</li>
+    {%endfor%}
+    </ul>
+</div>
+</body>
