@@ -12,7 +12,15 @@ def home(request):
     albums = getDataAPI.getAlbumsByArtist(artista)
     print(albums)
     context = {
+
         'albums': albums,
         'artist': artist
     }
-    return render(request, 'shareMusic/home.html', context)
+    return render(request, 'shareMusic/dashboard.html', context)
+
+def secondPage(request):
+    context = {
+        'albums': [],
+        'artist': 'Nadie'
+    }
+    return render(request, 'shareMusic/dashboard.html',context)
