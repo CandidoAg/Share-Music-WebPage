@@ -1,10 +1,20 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css.css' %}">
 </head>
 <body>
+<div class="header">
+  <h1>shareMusic</h1>
+</div>
+<div class="navbar">
+  <a href="#" class="active">Dashboard</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" class="right">Link</a>
+</div>
 <div class="container">
     <!-- Albunes de un artista
     {% for album in albums %}
@@ -13,9 +23,11 @@
 
     <h1>{{artist}}</h1>
     <h2>Álbumes:</h2>
+    <ul>
     {% for album in albums %}
-       <p>&nbsp;&nbsp;&nbsp;&nbsp;{{album.name}}</p>
+       <li>&nbsp;&nbsp;&nbsp;&nbsp;{{album.name}}</li>
     {%endfor%}
+    </ul>
 </div>
 </body>
 </html>
