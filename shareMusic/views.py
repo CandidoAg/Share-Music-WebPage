@@ -8,7 +8,8 @@ artista = 'spotify:artist:2WX2uTcsvV5OnS0inACecP'
 
 # Create your views here.
 def home(request):
-    songs = [{'name': 'uno'}, {'name': 'dos'}, {'name': 'tres'}, {'name': 'cuatro'}]
+    songs = [{'name': 'uno', 'like': False}, {'name': 'dos', 'like': True}, {'name': 'tres', 'like': True},
+             {'name': 'cuatro', 'like': False}]
     context = {
         'songs': songs,
     }

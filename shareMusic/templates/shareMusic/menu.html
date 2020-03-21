@@ -1,4 +1,6 @@
 {% load static %}
+{% include 'material/includes/material_css.html' %}
+{% include 'material/includes/material_js.html' %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,3 +22,25 @@
     {% endwith %}
 </body>
 </html>
+
+<script>
+    function search() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("list");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+

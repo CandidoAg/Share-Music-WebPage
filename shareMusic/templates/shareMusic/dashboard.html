@@ -1,29 +1,24 @@
 {% include "shareMusic/menu.html" with active_tab='Dashboard' %}
-<div class="container">
-    <input id="search" onkeyup="myFunction()" placeholder="Buscar una canción" type="search">
-    <ul id="songList">
-    {% for song in songs %}
-       <li>&nbsp;&nbsp;&nbsp;&nbsp;{{song.name}}</li>
-    {%endfor%}
-    </ul>
-</div>
+<div class="container" align="center">
+    <input id="search" onkeyup="search()" placeholder="Buscar una canción" type="search">
+    <table id="list">
+        <thead>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            {% for song in songs %}
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;{{song.name}}</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;{% if song.like %}
+                                                <i class="material-icons">favorite</i>
+                                            {% else %}
+                                                <i class="material-icons">favorite_border</i>
+                                            {% endif%}
 
-<script>
-    function myFunction() {
-        console.log('holi')
-        var input, filter, ul, li, a, i, txtValue;
-        input = document.getElementById("search");
-        filter = input.value.toUpperCase();
-        ul = document.getElementById("songList");
-        li = ul.getElementsByTagName("li");
-        for (i = 0; i < li.length; i++) {
-            a = li[i].getElementsByTagName("a")[0];
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                li[i].style.display = "";
-            } else {
-                li[i].style.display = "none";
-            }
-        }
-    }
-</script>
+                </td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</div>
