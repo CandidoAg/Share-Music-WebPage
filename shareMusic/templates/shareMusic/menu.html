@@ -42,5 +42,16 @@
             }
         }
     }
+
+    function favoriteStatus(status, index){
+        var favorite = document.getElementById("state@@"+index).getAttribute('favorite')
+        if(favorite == 'true'){
+            document.getElementById("state@@"+index).textContent = 'favorite_border';
+            document.getElementById("state@@"+index).setAttribute('favorite', false)
+        }else{
+            document.getElementById("state@@"+index).textContent = 'favorite';
+            document.getElementById("state@@"+index).setAttribute('favorite', true)
+        }
+    }
 </script>
 

@@ -9,13 +9,16 @@
         <tbody>
             {% for song in songs %}
             <tr>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;{{song.name}}</td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;{% if song.like %}
-                                                <i class="material-icons">favorite</i>
-                                            {% else %}
-                                                <i class="material-icons">favorite_border</i>
-                                            {% endif%}
-
+                <td>{{song.name}}</td>
+                <td>{% if song.like %}
+                        <i id="state@@{{forloop.counter0}}" class="material-icons"
+                           onclick = "favoriteStatus({{song.like|yesno:'true,false' }}, {{forloop.counter0}})"
+                           favorite="true" style="cursor:pointer">favorite</i>
+                    {% else %}
+                        <i id="state@@{{forloop.counter0}}" class="material-icons"
+                            onclick = "favoriteStatus({{song.like|yesno:'true,false' }}, {{forloop.counter0}})"
+                           favorite="false" style="cursor:pointer">favorite_border</i>
+                    {% endif%}
                 </td>
             </tr>
             {%endfor%}

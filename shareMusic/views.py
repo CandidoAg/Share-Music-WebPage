@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect
 
-##import getDataAPI
+import getDataAPI
 
 ##Valores státicos para pruebas
 artista = 'spotify:artist:2WX2uTcsvV5OnS0inACecP'
