@@ -1,0 +1,15 @@
+{% include "shareMusic/menu.html" with active_tab='descubrimiento' %}
+<div class="container">
+    <p>Descubrimiento por género musical:</p>
+    <ul>
+        {% for genre in genreList %}
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;{{genre}}</li>
+        {%endfor%}
+    </ul>
+    <p>Canciones más escuchadas:</p>
+    <ul>
+        {% for sing in songsList %}
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;{{song.name}}</li>
+        {%endfor%}
+    </ul>
+</div>

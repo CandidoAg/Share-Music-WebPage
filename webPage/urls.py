@@ -20,5 +20,8 @@ from shareMusic import views as p_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', p_views.home, name='home'),
-    path('secondPage', p_views.secondPage, name='secondPage')
+    path('Playlist', p_views.playlist, name='playlist'),
+    path('Descubrimiento', p_views.descubrimiento, name='descubrimiento'),
+    path('Perfil', p_views.perfil, name='perfil'),
+    path('Logout', p_views.logout, name='logout'),
 ]

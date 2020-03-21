@@ -1,0 +1,8 @@
+{% include "shareMusic/menu.html" with active_tab='playlist' %}
+<div class="container">
+    <ul>
+    {% for playList in playLists %}
+       <li>&nbsp;&nbsp;&nbsp;&nbsp;{{playList.name}}</li>
+    {%endfor%}
+    </ul>
+</div>

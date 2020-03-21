@@ -1,15 +1,29 @@
 {% include "shareMusic/menu.html" with active_tab='Dashboard' %}
 <div class="container">
-    <!-- Albunes de un artista
-    {% for album in albums %}
-        <p>{{album.name}}</p>
-    {%endfor%}-->
-
-    <h1>{{artist}}</h1>
-    <h2>Álbumes:</h2>
-    <ul>
-    {% for album in albums %}
-       <li>&nbsp;&nbsp;&nbsp;&nbsp;{{album.name}}</li>
+    <input id="search" onkeyup="myFunction()" placeholder="Buscar una canción" type="search">
+    <ul id="songList">
+    {% for song in songs %}
+       <li>&nbsp;&nbsp;&nbsp;&nbsp;{{song.name}}</li>
     {%endfor%}
     </ul>
 </div>
+
+<script>
+    function myFunction() {
+        console.log('holi')
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("songList");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
