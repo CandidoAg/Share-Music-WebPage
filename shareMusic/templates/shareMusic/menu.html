@@ -1,4 +1,6 @@
 {% load static %}
+{% load bootstrap4 %
+
 {% include 'material/includes/material_css.html' %}
 {% include 'material/includes/material_js.html' %}
 <html lang="en">
@@ -42,8 +44,7 @@
             }
         }
     }
-
-    function favoriteStatus(status, index){
+     function favoriteStatus(status, index){
         var favorite = document.getElementById("state@@"+index).getAttribute('favorite')
         if(favorite == 'true'){
             document.getElementById("state@@"+index).textContent = 'favorite_border';

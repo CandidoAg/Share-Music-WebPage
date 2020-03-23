@@ -24,9 +24,9 @@ def playlist(request):
 
 
 def descubrimiento(request):
+    categories = sorted(getDataAPI.getAllCategories()['categories']['items'], reverse=False, key=lambda x: x['name'])
     context = {
-        'genreList': [],
-        'songsList': []
+        'categories': categories,
     }
     return render(request, 'shareMusic/Discover.html', context)
 

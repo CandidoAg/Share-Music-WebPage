@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'shareMusic.apps.SharemusicConfig',
     'material',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [

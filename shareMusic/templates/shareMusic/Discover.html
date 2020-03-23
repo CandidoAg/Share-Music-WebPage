@@ -1,15 +1,12 @@
 {% include "shareMusic/menu.html" with active_tab='descubrimiento' %}
 <div class="container">
-    <p>Descubrimiento por género musical:</p>
-    <ul>
-        {% for genre in genreList %}
-           <li>&nbsp;&nbsp;&nbsp;&nbsp;{{genre}}</li>
+    <div class="card-deck">
+        {% for category in categories %}
+        <div class="card">
+            <img src="{{category.icons.url}}" alt="Avatar" style="height:{{category.icons.height}};
+                                                                            width:{{category.icons.width}}">
+            <p slign="center">{{category.name}}</p>
+        </div>
         {%endfor%}
-    </ul>
-    <p>Canciones más escuchadas:</p>
-    <ul>
-        {% for sing in songsList %}
-           <li>&nbsp;&nbsp;&nbsp;&nbsp;{{song.name}}</li>
-        {%endfor%}
-    </ul>
+    </div>
 </div>

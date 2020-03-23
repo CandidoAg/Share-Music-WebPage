@@ -24,3 +24,13 @@ def getAlbumsByArtist(artist):
 def getArtist(artistID):
     results = spotify.artist(artistID)
     return results['name']
+
+
+def getMostPlayedSongs():
+    results = spotify.playlist_tracks(playlist_id='37i9dQZEVXbMDoHDwVN2tF')
+    return results
+
+
+def getAllCategories():
+    results = spotify.categories()
+    return results
