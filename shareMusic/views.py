@@ -25,6 +25,7 @@ def playlist(request):
 
 def descubrimiento(request):
     categories = sorted(getDataAPI.getAllCategories()['categories']['items'], reverse=False, key=lambda x: x['name'])
+    print(categories)
     context = {
         'categories': categories,
     }

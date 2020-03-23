@@ -1,12 +1,17 @@
 {% include "shareMusic/menu.html" with active_tab='descubrimiento' %}
+
 <div class="container">
-    <div class="card-deck">
-        {% for category in categories %}
+    <div class="card-group">
+    {% for category in categories %}
         <div class="card">
-            <img src="{{category.icons.url}}" alt="Avatar" style="height:{{category.icons.height}};
-                                                                            width:{{category.icons.width}}">
-            <p slign="center">{{category.name}}</p>
+            <div class="card-header">
+                {{category.name}}
+            </div>
+            {% for icon in category.icons %}
+                <img src="{{icon.url}}" alt="category">
+            {%endfor%}
+            <p align="center"></p>
         </div>
-        {%endfor%}
+    {%endfor%}
     </div>
 </div>
