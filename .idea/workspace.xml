@@ -150,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584978584158</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="IU done">
+      <created>1584979752966</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1584979752966</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -204,11 +211,11 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2599" y="134" key="#manage/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584119492549" />
-    <state x="2415" y="94" width="854" height="854" key="CommitChangelistDialog2" timestamp="1584978580434">
+    <state x="2415" y="94" width="854" height="854" key="CommitChangelistDialog2" timestamp="1584979752512">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2486" y="93" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584830024306" />
-    <state x="2415" y="94" width="854" height="854" key="CommitChangelistDialog2/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1584978580434" />
+    <state x="2415" y="94" width="854" height="854" key="CommitChangelistDialog2/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1584979752512" />
     <state x="2486" y="97" width="848" height="919" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583769339050" />
     <state x="1985" y="299" width="1650" height="822" key="DiffContextDialog" timestamp="1584893747311">
       <screen x="1920" y="0" width="1920" height="1040" />
