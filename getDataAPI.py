@@ -45,3 +45,7 @@ def getPlayListByCategory(categoryId):
 def getSongsByPlayList(playListId):
     results = spotify.playlist_tracks(playListId)
     return results
+
+def getsongsByCategory(categoryId):
+    results = spotify.category_playlists(categoryId)
+    return results

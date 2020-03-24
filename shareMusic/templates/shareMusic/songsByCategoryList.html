@@ -6,10 +6,12 @@
             <th></th>
             <th></th>
             <th></th>
+            <th></th>
         </thead>
         <tbody>
             {% for song in songs %}
-            <tr onclick>
+            <tr>
+                <td>{{forloop.counter}}</td>
                 <td>{{song.name}}</td>
                 <td>{{song.artists}}</td>
                 <td>{% if song.like %}

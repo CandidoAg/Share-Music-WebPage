@@ -5,10 +5,12 @@
         <thead>
             <th></th>
             <th></th>
+            <th></th>
         </thead>
         <tbody>
             {% for playList in playLists %}
             <tr onclick="location.href='{% url 'songByCategoryPlayList' playListId=playList.id%}'">
+                <td>{{forloop.counter}}</td>
                 <td>{{playList.name}}</td>
                 <td>{% if playList.like %}
                      <i id="state@@{{forloop.counter0}}" class="material-icons"

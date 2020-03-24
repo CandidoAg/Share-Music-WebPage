@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="79727ca4-a184-494d-af43-bf5125b7a850" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getDataAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/getDataAPI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shareMusic/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shareMusic/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585055343502</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Discover tab navigation done">
+      <created>1585055731879</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1585055731880</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -279,11 +284,11 @@
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2533" y="394" width="518" height="295" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585052207773" />
-    <state x="2415" y="94" width="854" height="854" key="CommitChangelistDialog2" timestamp="1585055343436">
+    <state x="2415" y="94" width="854" height="854" key="CommitChangelistDialog2" timestamp="1585055731791">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2486" y="93" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584830024306" />
-    <state x="2415" y="94" width="854" height="854" key="CommitChangelistDialog2/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585055343436" />
+    <state x="2415" y="94" width="854" height="854" key="CommitChangelistDialog2/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585055731791" />
     <state x="618" y="121" key="CommitChangelistDialog2/1920.0.1680.1050/74.27.1846.1053@74.27.1846.1053" timestamp="1585041051250" />
     <state x="2486" y="97" width="848" height="919" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583769339050" />
     <state x="1994" y="220" width="1444" height="830" key="DiffContextDialog" timestamp="1585055212657">
@@ -322,16 +327,18 @@
     <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584895278679" />
     <state width="1583" height="271" key="GridCell.Tab.0.right/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585055630482" />
     <state width="1827" height="275" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583768767212" />
-    <state x="184" y="86" key="MergeDialog" timestamp="1584974282567">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2081" y="87" width="1344" height="877" key="MergeDialog" timestamp="1585055870310">
+      <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2104" y="86" key="MergeDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584825301927" />
     <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584974282567" />
-    <state x="672" y="236" key="MultipleFileMergeDialog" timestamp="1584974282583">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2081" y="87" width="1344" height="877" key="MergeDialog/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585055870310" />
+    <state x="2508" y="238" width="580" height="571" key="MultipleFileMergeDialog" timestamp="1585055876593">
+      <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2592" y="236" key="MultipleFileMergeDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584825301932" />
     <state x="672" y="236" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584974282583" />
+    <state x="2508" y="238" width="580" height="571" key="MultipleFileMergeDialog/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585055876593" />
     <state x="2497" y="231" width="589" height="621" key="RollbackChangesDialog" timestamp="1585048690145">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
@@ -342,12 +349,12 @@
     <state x="2404" y="137" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584820497422" />
     <state x="1994" y="127" width="910" height="812" key="SettingsEditor/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1584976273480" />
     <state x="2404" y="142" width="1022" height="783" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583761939552" />
-    <state x="593" y="302" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1585041074361">
-      <screen x="74" y="27" width="1846" height="1053" />
+    <state x="2392" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1585055811771">
+      <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2459" y="271" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584825318769" />
     <state x="539" y="271" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584974296240" />
-    <state x="2392" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1584981802714" />
+    <state x="2392" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585055811771" />
     <state x="593" y="302" key="Vcs.Push.Dialog.v2/1920.0.1680.1050/74.27.1846.1053@74.27.1846.1053" timestamp="1585041074361" />
     <state x="2517" y="256" width="551" height="573" key="VcsDiffUtil.ChangesDialog" timestamp="1584982475507">
       <screen x="1920" y="0" width="1680" height="1050" />
