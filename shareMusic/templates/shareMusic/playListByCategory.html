@@ -1,14 +1,15 @@
 {% include "shareMusic/menu.html" with active_tab='descubrimiento' %}
 
 <div class="container-fluid" style="margin-left:10%">
+        <h2>{{categoryName}}</h2>
         <div class="row card-deck">
-        {% for category in categories %}
+        {% for playList in playLists %}
             <div class="card" style="max-width: 19rem;" align="center" onclick="location.href='{% url 'categoryDetails' categoryId=category.id%}'">
-                {% for icon in category.icons %}
+                {% for image in playList.images %}
                     <div class="card-img-overlay card-header">
-                        <h5>{{category.name}}</h5>
+                        <h5>{{playList.name}}</h5>
                     </div>
-                    <img class="card-img" src="{{icon.url}}" alt="Category">
+                    <img class="card-img" src="{{image.url}}" alt="Category">
                   {%endfor%}
             </div>
         {%endfor%}

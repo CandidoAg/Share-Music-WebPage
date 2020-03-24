@@ -31,6 +31,21 @@ def descubrimiento(request):
     return render(request, 'shareMusic/Discover.html', context)
 
 
+def categotyDetails(request, categoryId):
+    data = getDataAPI.getsongsByCategory(categoryId)['playlists']
+    dataItems = data['items']
+    print(data)
+    songs = []
+    for song in dataItems:
+        songs.append({'name': song['name'],'like': False})
+
+    context = {
+        'categoryName': data['name'],
+        'songs': songs,
+    }
+    return render(request, 'shareMusic/playListByCategory.html', context)
+
+
 def perfil(request):
     context = {
         'user': 'Juan',
