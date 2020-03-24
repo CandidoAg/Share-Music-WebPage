@@ -25,7 +25,7 @@ urlpatterns = [
     path('Perfil', p_views.perfil, name='perfil'),
     path('Logout', p_views.logout, name='logout'),
 
-    path('Descubrimiento/category/<categoryId>', p_views.categotyDetails, name='categoryDetails'),
+    path('Descubrimiento/category/<categoryId>', p_views.categoryDetails, name='categoryDetails'),
     path('Descubrimiento/playList/<playListId>', p_views.songByCategoryPlayList, name='songByCategoryPlayList'),
 
 

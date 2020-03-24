@@ -1,7 +1,8 @@
 {% include "shareMusic/menu.html" with active_tab='descubrimiento' %}
-<div class="container" align="center">
-    <input id="search" onkeyup="search()" placeholder="Buscar una playList" type="search">
-    <table id="list">
+<div class="container" >
+    <input id="search" onkeyup="search()" placeholder="Buscar una cancion en la playlist" type="search" align="center">
+    <h4 class="col m6">Canciones de la playlist "{{categoryName}}":</h4>
+    <table id="list" align="center">
         <thead>
             <th></th>
             <th></th>
