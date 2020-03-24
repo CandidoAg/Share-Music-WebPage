@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="79727ca4-a184-494d-af43-bf5125b7a850" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shareMusic/templates/shareMusic/PlayListByCategory.html" beforeDir="false" afterPath="$PROJECT_DIR$/shareMusic/templates/shareMusic/PlayListByCategory.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585055731880</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Merge remote-tracking branch 'origin/'Discorver'' into 'Discorver'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;shareMusic/templates/shareMusic/menu.html&#10;#&#9;shareMusic/views.py&#10;#&#9;webPage/urls.py">
+      <created>1585056096666</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1585056096666</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -258,7 +266,8 @@
     <MESSAGE value="IU done" />
     <MESSAGE value="Discover tab navigation" />
     <MESSAGE value="Discover tab navigation done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Discover tab navigation done" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/'Discorver'' into 'Discorver'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;shareMusic/templates/shareMusic/menu.html&#10;#&#9;shareMusic/views.py&#10;#&#9;webPage/urls.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/'Discorver'' into 'Discorver'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;shareMusic/templates/shareMusic/menu.html&#10;#&#9;shareMusic/views.py&#10;#&#9;webPage/urls.py" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2392" y="200" width="800" height="684" key="#Inspections" timestamp="1585044470622">
@@ -284,18 +293,18 @@
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2533" y="394" width="518" height="295" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585052207773" />
-    <state x="2415" y="94" width="854" height="854" key="CommitChangelistDialog2" timestamp="1585055731791">
+    <state x="2415" y="94" width="854" height="854" key="CommitChangelistDialog2" timestamp="1585056096590">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2486" y="93" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584830024306" />
-    <state x="2415" y="94" width="854" height="854" key="CommitChangelistDialog2/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585055731791" />
+    <state x="2415" y="94" width="854" height="854" key="CommitChangelistDialog2/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585056096590" />
     <state x="618" y="121" key="CommitChangelistDialog2/1920.0.1680.1050/74.27.1846.1053@74.27.1846.1053" timestamp="1585041051250" />
     <state x="2486" y="97" width="848" height="919" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583769339050" />
-    <state x="1994" y="220" width="1444" height="830" key="DiffContextDialog" timestamp="1585055212657">
+    <state x="1994" y="220" width="1444" height="830" key="DiffContextDialog" timestamp="1585056111889">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="1985" y="299" width="1650" height="822" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584893747311" />
-    <state x="1994" y="220" width="1444" height="830" key="DiffContextDialog/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585055212657" />
+    <state x="1994" y="220" width="1444" height="830" key="DiffContextDialog/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585056111889" />
     <state x="2090" y="127" width="1650" height="853" key="DiffContextDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583768321779" />
     <state x="2698" y="299" width="379" height="510" key="FileChooserDialogImpl" timestamp="1584803978156">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -349,12 +358,12 @@
     <state x="2404" y="137" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584820497422" />
     <state x="1994" y="127" width="910" height="812" key="SettingsEditor/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1584976273480" />
     <state x="2404" y="142" width="1022" height="783" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583761939552" />
-    <state x="2392" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1585055811771">
+    <state x="2392" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1585056113275">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2459" y="271" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584825318769" />
     <state x="539" y="271" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584974296240" />
-    <state x="2392" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585055811771" />
+    <state x="2392" y="274" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1680.1050/74.27.1846.1053@1920.0.1680.1050" timestamp="1585056113275" />
     <state x="593" y="302" key="Vcs.Push.Dialog.v2/1920.0.1680.1050/74.27.1846.1053@74.27.1846.1053" timestamp="1585041074361" />
     <state x="2517" y="256" width="551" height="573" key="VcsDiffUtil.ChangesDialog" timestamp="1584982475507">
       <screen x="1920" y="0" width="1680" height="1050" />
