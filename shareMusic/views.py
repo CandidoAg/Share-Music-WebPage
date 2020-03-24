@@ -24,11 +24,42 @@ def playlist(request):
 
 
 def descubrimiento(request):
-    categories = sorted(getDataAPI.getAllCategories()['categories']['items'], reverse=False, key=lambda x: x['name'])
+    categories = sorted(getDataAPI.getAllCategories(), reverse=False, key=lambda x: x['name'])
     context = {
         'categories': categories,
     }
     return render(request, 'shareMusic/Discover.html', context)
+
+
+def categotyDetails(request, categoryId):
+    data = getDataAPI.getPlayListByCategory(categoryId)['playlists']
+    dataItems = data['items']
+    playLists = []
+    for playList in dataItems:
+        playLists.append({'name': playList['name'], 'id': playList['id'], 'like': False})
+
+    context = {
+        'categoryName': '', #TODO put name of category
+        'playLists': playLists,
+    }
+    return render(request, 'shareMusic/PlayListByCategory.html', context)
+
+
+def songByCategoryPlayList(request, playListId):
+    data = getDataAPI.getSongsByPlayList(playListId)['items']
+    songs = []
+    for items in data:
+            artists = ""
+            for artist in items['track']['artists']:
+                artists += artist['name']+", "
+            artists = artists[:-2]
+            songs.append({'name': items['track']['name'], 'artists': artists, 'like': False})
+
+    context = {
+        'categoryName': '',  #TODO put name of playList
+        'songs': songs,
+    }
+    return render(request, 'shareMusic/songsByCategoryList.html', context)
 
 
 def perfil(request):

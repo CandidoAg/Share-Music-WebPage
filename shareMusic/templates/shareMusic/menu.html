@@ -17,7 +17,10 @@
         <div class="navbar">
             <a href="{% url 'home' %}" class="{% if url_name == 'home' %}active{% endif %}">Dashboard</a>
             <a href="{% url 'playlist' %}" class="{% if url_name == 'playlist' %}active{% endif %}">Playlists</a>
-            <a href="{% url 'descubrimiento' %}" class="{% if url_name == 'descubrimiento' %}active{% endif %}">Descubrimiento</a>
+            <a href="{% url 'descubrimiento' %}"
+               class="{% if url_name == 'descubrimiento' or url_name == 'categoryDetails' or url_name == 'songByCategoryPlayList'%}active{% endif %}">
+                Descubrimiento
+            </a>
             <a href="{% url 'logout' %}" class="right {% if url_name == 'logout' %}active{% endif %}">Logout</a>
             <a href="{% url 'perfil' %}" class="right {% if url_name == 'perfil' %}active{% endif %}">Perfil</a>
         </div>

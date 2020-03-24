@@ -1,0 +1,30 @@
+{% include "shareMusic/menu.html" with active_tab='descubrimiento' %}
+<div class="container" align="center">
+    <input id="search" onkeyup="search()" placeholder="Buscar una playList" type="search">
+    <table id="list">
+        <thead>
+            <th></th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            {% for song in songs %}
+            <tr onclick>
+                <td>{{song.name}}</td>
+                <td>{{song.artists}}</td>
+                <td>{% if song.like %}
+                     <i id="state@@{{forloop.counter0}}" class="material-icons"
+                        onclick = "favoriteStatus({{song.like|yesno:'true,false' }}, {{forloop.counter0}})"
+                        favorite="true" style="cursor:pointer">favorite</i>
+                     {% else %}
+                        <i id="state@@{{forloop.counter0}}" class="material-icons"
+                            onclick = "favoriteStatus({{song.like|yesno:'true,false' }}, {{forloop.counter0}})"
+                           favorite="false" style="cursor:pointer">favorite_border</i>
+                    {% endif%}
+                </td>
+            </tr>
+            {%endfor%}
+        </tbody>
+
+    </table>
+</div>

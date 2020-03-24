@@ -31,6 +31,17 @@ def getMostPlayedSongs():
     return results
 
 
-def getAllCategories():
-    results = spotify.categories()
+def getAllCategories():  # TODO Coger las más importantes
+    results = spotify.categories()['categories']['items']
+    print(results)
+    return results
+
+
+def getPlayListByCategory(categoryId):
+    results = spotify.category_playlists(categoryId)
+    return results
+
+
+def getSongsByPlayList(playListId):
+    results = spotify.playlist_tracks(playListId)
     return results
