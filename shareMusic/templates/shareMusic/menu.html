@@ -1,34 +1,17 @@
-{% load static %}
-{% load bootstrap4 %}
-
-{% include 'material/includes/material_css.html' %}
-{% include 'material/includes/material_js.html' %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ShareMusic</title>
-    <link rel="stylesheet" type="text/css" href="{% static '/css.css' %}">
-    <div class="header">
-      <h1>shareMusic</h1>
-    </div>
-</head>
-<body>
-
+{% include "shareMusic/header.html" %}
     <div class="navbar" style="margin-bottom:20px">
         {% with url_name=request.resolver_match.url_name %}
                 <a href="{% url 'home' %}" class="{% if url_name == 'home' %}active{% endif %}">Dashboard</a>
                 <a href="{% url 'playlist' %}" class="{% if url_name == 'playlist' %}active{% endif %}">Playlists</a>
-                <!--<a href="{ url 'descubrimiento' }"
+                <<a href="{% url 'descubrimiento' %}"
                    class="{% if url_name == 'descubrimiento' or url_name == 'categoryDetails' or url_name == 'songByCategoryPlayList'%}active{% endif %}">
                     Descubrimiento
-                </a>-->
-                <a href="/logout" class="right">Log out</a>
+                </a>
+                <a href="{% url 'logout' %}" class="right header-link">Log out</a>
                 <a href="{% url 'perfil' %}" class="right {% if url_name == 'perfil' %}active{% endif %}">Perfil</a>
 
         {% endwith %}
     </div>
-</body>
-</html>
 
 <script>
     function search() {
