@@ -65,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -140,9 +142,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/index'
+LOGOUT_REDIRECT_URL = '/'
 
 # SPOTIFY_DATA
 SOCIAL_AUTH_SPOTIFY_KEY = '78ce958ba6244e9fa36c02a68f41ebf8'
 SOCIAL_AUTH_SPOTIFY_SECRET = '1d2bfb727ce34f2b86cda50dd978e872'
 SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']
+
+# For admin
+SOCIAL_AUTH_ADMIN_USER_SEARCH_FIELDS = ['username']

@@ -19,14 +19,14 @@ from shareMusic import views as p_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', p_views.home, name='home'),
+    path('social/', include('social_django.urls')),
+    path('', include('django.contrib.auth.urls')),
+
+    path('', p_views.login, name="login"),
+    path('index', p_views.home, name='home'),
     path('Playlist', p_views.playlist, name='playlist'),
     # path('Descubrimiento', p_views.descubrimiento, name='descubrimiento'),
-    path('Perfil', p_views.perfil, name='perfil'),
-    path('Logout', p_views.logout, name='logout'),
-
     # path('Descubrimiento/category/<categoryId>', p_views.categoryDetails, name='categoryDetails'),
     # path('Descubrimiento/playList/<playListId>', p_views.songByCategoryPlayList, name='songByCategoryPlayList'),
-
-    path('social/', include('social_django.urls')),
+    path('Perfil', p_views.perfil, name='perfil'),
 ]
