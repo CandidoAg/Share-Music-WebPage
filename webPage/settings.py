@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'shareMusic.apps.SharemusicConfig',
     'material',
     'bootstrap4',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,25 @@ TEMPLATES = [
         },
     },
 ]
+
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.spotify.SpotifyOAuth2',
+)
+
+SOCIAL_AUTH_PIPELINE = (
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.auth_allowed',
+    'social_core.pipeline.social_auth.social_user',
+    'social_core.pipeline.social_auth.associate_by_email',
+    'social_core.pipeline.user.create_user',
+    'social_core.pipeline.social_auth.associate_user',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
+)
 
 WSGI_APPLICATION = 'webPage.wsgi.application'
 
@@ -120,3 +140,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = '/'
+
+# SPOTIFY_DATA
+SOCIAL_AUTH_SPOTIFY_KEY = '78ce958ba6244e9fa36c02a68f41ebf8'
+SOCIAL_AUTH_SPOTIFY_SECRET = '1d2bfb727ce34f2b86cda50dd978e872'
+SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']

@@ -14,19 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from shareMusic import views as p_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', p_views.home, name='home'),
     path('Playlist', p_views.playlist, name='playlist'),
-    path('Descubrimiento', p_views.descubrimiento, name='descubrimiento'),
+    # path('Descubrimiento', p_views.descubrimiento, name='descubrimiento'),
     path('Perfil', p_views.perfil, name='perfil'),
     path('Logout', p_views.logout, name='logout'),
 
-    path('Descubrimiento/category/<categoryId>', p_views.categoryDetails, name='categoryDetails'),
-    path('Descubrimiento/playList/<playListId>', p_views.songByCategoryPlayList, name='songByCategoryPlayList'),
+    # path('Descubrimiento/category/<categoryId>', p_views.categoryDetails, name='categoryDetails'),
+    # path('Descubrimiento/playList/<playListId>', p_views.songByCategoryPlayList, name='songByCategoryPlayList'),
 
-
+    path('social/', include('social_django.urls')),
 ]
