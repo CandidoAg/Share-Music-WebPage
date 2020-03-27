@@ -29,4 +29,5 @@ urlpatterns = [
     path('Descubrimiento/category/<categoryId>', p_views.categoryDetails, name='categoryDetails'),
     path('Descubrimiento/playList/<playListId>', p_views.songByCategoryPlayList, name='songByCategoryPlayList'),
     path('Perfil', p_views.perfil, name='perfil'),
+
 ]

@@ -1,5 +1,14 @@
 {% include "shareMusic/header.html" with active_tab='Dashboard' %}
-    <div class="container" align="center">
-        <h2>Login</h2>
-        <a href="{% url 'social:begin' 'spotify' %}">Log in</a>
-    </div>
+<div class="container" align="center">
+    <h2>Login</h2>
+
+    <form action="{% url 'social:begin' 'spotify' %}" method="POST">
+        {% csrf_token %}
+        {% if error %}
+        {{ error }}
+        {% endif %}
+        {{ form.as_p }}
+        <input type="hidden" name="next" value="{{ request.GET.next }}"/>
+        <input type="submit" name="submit" value="Log in"/>
+    </form>
+</div>

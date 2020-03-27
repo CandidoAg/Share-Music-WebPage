@@ -1,55 +1,65 @@
 import spotipy
+from django.conf import settings
 from spotipy.oauth2 import SpotifyClientCredentials
 
-# Client data
-scope = 'user-library-read'
-SPOTIPY_CLIENT_ID = '78ce958ba6244e9fa36c02a68f41ebf8'
-SPOTIPY_CLIENT_SECRET = '1d2bfb727ce34f2b86cda50dd978e872'
-SPOTIPY_CLIENT_REDIRECT_URL = 'http://127.0.0.1:8000/social/complete/spotify/'
 
-client_credentials_manager = SpotifyClientCredentials(SPOTIPY_CLIENT_ID,
-                                                      SPOTIPY_CLIENT_SECRET)
-spotify = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-
+class getData(object):
+    user = ''
+    client_credentials_manager = SpotifyClientCredentials(settings.SOCIAL_AUTH_SPOTIFY_KEY,
+                                                          settings.SOCIAL_AUTH_SPOTIFY_SECRET)
+    spotify = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
+    class Meta:
+        abstract = True
 
 
-def getAlbumsByArtist(artist):
-    results = spotify.artist_albums(artist, album_type='album')
-    albums = results['items']
-    while results['next']:
-        results = spotify.next(results)
-        albums.extend(results['items'])
+    @classmethod
+    def set_user(self, username):
+        self.user = username
 
-    return albums
+    @classmethod
+    def getAlbumsByArtist(self, artist):
+        results = self.spotify.artist_albums(artist, album_type='album')
+        albums = results['items']
+        while results['next']:
+            results = self.spotify.next(results)
+            albums.extend(results['items'])
 
+        return albums
 
-def getArtist(artistID):
-    results = spotify.artist(artistID)
-    return results['name']
+    @classmethod
+    def getArtist(self, artistID):
+        results = self.spotify.artist(artistID)
+        return results['name']
 
+    @classmethod
+    def getMostPlayedSongs(self):
+        results = self.spotify.playlist_tracks(playlist_id='37i9dQZEVXbMDoHDwVN2tF')
+        return results
 
-def getMostPlayedSongs():
-    results = spotify.playlist_tracks(playlist_id='37i9dQZEVXbMDoHDwVN2tF')
-    return results
+    @classmethod
+    def getAllCategories(self):
+        results = self.spotify.categories(limit=50)['categories']['items']
+        return results
 
+    @classmethod
+    def getPlayListByCategory(self, categoryId):
+        results = self.spotify.category_playlists(categoryId)
+        categories = self.spotify.categories(limit=50)['categories']['items']
+        categoryName = ""
+        for category in categories:
+            if (category['id'].upper() == categoryId.upper()):
+                categoryName = category['name']
+        return categoryName, results
 
-def getAllCategories():
-    results = spotify.categories(limit=50)['categories']['items']
-    return results
+    @classmethod
+    def getSongsByPlayList(self, playListId):
+        results = self.spotify.playlist_tracks(playListId)
+        playList = self.spotify.playlist(playListId)
 
+        return playList['name'], results
 
-def getPlayListByCategory(categoryId):
-    results = spotify.category_playlists(categoryId)
-    categories = spotify.categories(limit=50)['categories']['items']
-    categoryName = ""
-    for category in categories:
-        if(category['id'].upper() == categoryId.upper()):
-            categoryName = category['name']
-    return categoryName, results
-
-
-def getSongsByPlayList(playListId):
-    results = spotify.playlist_tracks(playListId)
-    playList = spotify.playlist(playListId)
-
-    return playList['name'], results
+    @classmethod
+    def currentUser(self):
+        print(self.user)
+        results = self.spotify.user(self.user.__str__())
+        return results

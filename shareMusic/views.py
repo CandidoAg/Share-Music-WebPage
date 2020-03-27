@@ -2,34 +2,28 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth.models import User
 
-import getDataAPI
-
-##Valores státicos para pruebas
-artista = 'spotify:artist:2WX2uTcsvV5OnS0inACecP'
-
+from getDataAPI import getData
 
 # TODO Branch User
-#  Control if not logged --> Go to login
 #  change getData to use the user get in login
 
 
 def login(request):
-    if User:
-        return render(request, "shareMusic/login.html")
-    else:
-        return home(request)
+    return render(request, "shareMusic/login.html")
 
 
-# Create your views here.
 @login_required
 def home(request):
-    songs = [{'name': 'uno', 'like': False}, {'name': 'dos', 'like': True}, {'name': 'tres', 'like': True},
-             {'name': 'cuatro', 'like': False}]
-    context = {
-        'songs': songs,
-    }
-    return render(request, 'shareMusic/dashboard.html', context)
-
+    getData.set_user(User.objects.filter(id=request.session['_auth_user_id'])[0])
+    if request.POST.get('next'):
+        return HttpResponseRedirect(request.POST.get('next'))
+    else:
+        songs = [{'name': 'uno', 'like': False}, {'name': 'dos', 'like': True}, {'name': 'tres', 'like': True},
+                 {'name': 'cuatro', 'like': False}]
+        context = {
+            'songs': songs,
+        }
+        return render(request, 'shareMusic/dashboard.html', context)
 
 @login_required
 def playlist(request):
@@ -41,7 +35,7 @@ def playlist(request):
 
 @login_required
 def descubrimiento(request):
-    categories = sorted(getDataAPI.getAllCategories(), reverse=False, key=lambda x: x['name'])
+    categories = sorted(getData.getAllCategories(), reverse=False, key=lambda x: x['name'])
     context = {
         'categories': categories,
     }
@@ -50,7 +44,7 @@ def descubrimiento(request):
 
 @login_required
 def categoryDetails(request, categoryId):  # TODO Salen categorias a veces que no existe el id
-    categoryName, data = getDataAPI.getPlayListByCategory(categoryId)
+    categoryName, data = getData.getPlayListByCategory(categoryId)
     dataItems = data['playlists']['items']
     playLists = []
     for playList in dataItems:
@@ -65,7 +59,7 @@ def categoryDetails(request, categoryId):  # TODO Salen categorias a veces que n
 
 @login_required
 def songByCategoryPlayList(request, playListId):
-    playListName, data = getDataAPI.getSongsByPlayList(playListId)
+    playListName, data = getData.getSongsByPlayList(playListId)
     items = data['items']
     songs = []
     for item in items:
@@ -84,8 +78,7 @@ def songByCategoryPlayList(request, playListId):
 
 @login_required
 def perfil(request):
-    user = User.objects.get(id=1)
-    print(user)
+    user = getData.currentUser()
     context = {
         'user': user
     }
